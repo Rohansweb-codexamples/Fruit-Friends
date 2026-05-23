@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fruit Friend Garden</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Fruit Friend Garden</h1>
+    <p class="subtitle">Choose a fruit friend, pet them, and help them grow!</p>
+
+    <section class="panel controls">
+      <label for="fruitSelect">Pick your fruit friend:</label>
+      <select id="fruitSelect" aria-label="Choose fruit">
+        <option value="apple">🍎 Apple</option>
+        <option value="banana">🍌 Banana</option>
+        <option value="orange">🍊 Orange</option>
+        <option value="strawberry">🍓 Strawberry</option>
+        <option value="grapes">🍇 Grapes</option>
+      </select>
+      <button id="adoptBtn">Adopt Fruit Friend</button>
+    </section>
+
+    <section class="panel friend-zone" aria-live="polite">
+      <div id="fruitContainer" class="fruit-container hidden">
+        <div id="fruit" class="fruit" role="img" aria-label="Fruit friend">
+          <span class="eyes">◕‿◕</span>
+        </div>
+      </div>
+      <p id="status">Adopt a fruit to begin your friendship.</p>
+      <div class="stats">
+        <span>Growth: <strong id="growthValue">0</strong>%</span>
+        <span>Happiness: <strong id="happinessValue">0</strong></span>
+      </div>
+      <div class="actions">
+        <button id="petBtn" disabled>Pet</button>
+        <button id="feedBtn" disabled>Feed</button>
+        <button id="playBtn" disabled>Play</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
